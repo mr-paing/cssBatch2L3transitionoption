@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Transition Options</title>
+		<style type="text/css">
+			.container{
+				width:900px;
+			} /*မထဲ့လည်း ရတယ်, ဒီမှာ အကျင့်ဖြစ်စေရန်သာ ရေးသည်။*/
+			.move{
+				width:150px;
+				height: 50px;
+				background-color: red;
+				color: #fff;
+				font-size: 20px;
+				padding: 10px; /*အတွင်းသား ဘေးပတ်ပတ်လည်ကို ကန်သည်။ အသားပိုယူ */
+
+				text-align: center;
+				line-height: 50px; 
+
+				/*vertical center ချဖို့အတွက် height ကိုလှန်းကြည့် ထိုအတိုင်းပေး ။ တစ်ကြောင်းရှိရာတွင် သာ အလုပ်လုပ်သည်။ စာကြောင်းများစွာ တွင် အလုပ်မလုပ်။*/
+
+				/*1 REM = 16PX , 1 rem သည် 16px နှင့် ညီမျှသည်။*/ 
+				/*LOCAL တွင် REM ကိုသိပ်မသုံး, အနောက်တိုင်းတွင် အသုံးများ။*/
+				border-radius: 16px;
+
+				margin: 16px; /* box များခွါချင်ရင် margin ကိုသုံး။ တစ်ခုပေးယုံနဲ့ top,left,gright,botton အားလုံးမှာအလုပ်လုပ်သည် , အပြင်သား ကိုကန်သည်။*/
+
+				transition-property: all;
+				transition-duration: 3s;
+			}
+
+			/*.move:hover{
+				background-color:green;
+			}*/
+
+/*FUNCTION()
+NEME(PARAMETER)*/
+			.move:hover{
+				transform: translate(900px);
+			} 
+
+			/*transform:translate() လက်ရှိရှိနေတဲ့ နေရာကနေ ရွေ့ဿွားစေရန်သုံး, ပုံမှန်ဆိုလျှင် X ဝင်ရိုးပေါ်မှာကပဲ အလုပ်လုပ်သည်။*/
+
+			#ease{
+				transition-timing-function: ease; /*အစတွင် အရှိန်ယူ အလယ်တွင် အရှိန်နဲ့ထွက် အဆုံးတွင် ဖြေး ။*/
+
+			}
+			#ease-in{
+				transition-timing-function: ease-in;
+				/*ဖြေး အရှိန်နဲ့ထွက်  မြန်*/
+
+			}
+			#ease-out{
+				transition-timing-function: ease-in-out;
+				/*မြန်, နှေး , မြန်  (ဖြေး မြန်ဖြေး)*/
+
+			}
+			#ease-in-out{
+				transition-timing-function: ease-in-out;
+/*နှေး, နနည်းနည်းမြန်, နှေး*/
+			}
+			#lenear{
+				transition-timing-function: linear;
+/*အချိုးညီညီ သွား*/
+			}
+			/*တစ်ခုချင်းကွာခြားချက်ကို ပြချင်လို့ id ကိုသုံးသည်။ သူ့ကိုEase နဲံ တွဲသုံးကို သုံးရမည်ဟု တစ်ထစ်ချ မမှတ်ရ။*/
+
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div id="ease" class="move">Ease</div> <!-- id name များသည် မိမိ ကြိုက်သလို ရေးနိုင်သည်။ -->
+			<div id="ease-in" class="move">Ease-in</div> 
+			<div id="ease-out" class="move">Ease-out</div> 
+			<div id="ease-in-out" class="move">Ease-in-out</div> 
+			<div id="linear" class="move">Linear</div> 
+			
+		</div>
+	</body>
+
+</html>
+<!-- effect 5 မျိုး -->
+
+<!-- 27TS 
+
+
+
+REQ: "resion" -->
